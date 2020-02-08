@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using OceanCoursePlugin._1_CoreAndServices;
 using Slb.Ocean.Core;
 
 namespace OceanCoursePlugin
@@ -21,7 +22,13 @@ namespace OceanCoursePlugin
 
         public override Uri PluginUri => new Uri("http://www.pluginuri.info");
 
-        public override IEnumerable<ModuleReference> Modules => Enumerable.Empty<ModuleReference>();
+        public override IEnumerable<ModuleReference> Modules
+        {
+            get
+            {
+                yield return new ModuleReference(typeof(CoreAndServicesModule));
+            }
+        }
 
         public override string Name => "OceanPlugin";
 
