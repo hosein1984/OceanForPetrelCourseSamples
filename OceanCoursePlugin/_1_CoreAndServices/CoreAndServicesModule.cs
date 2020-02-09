@@ -1,8 +1,6 @@
-using System;
+using System.Reflection;
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
-using Slb.Ocean.Petrel.UI;
-using Slb.Ocean.Petrel.Workflow;
 
 namespace OceanCoursePlugin._1_CoreAndServices
 {
@@ -12,8 +10,11 @@ namespace OceanCoursePlugin._1_CoreAndServices
     /// </summary>
     public class CoreAndServicesModule : IModule
     {
+        private static readonly string ClassName = typeof(CoreAndServicesModule).Name;
+
         public CoreAndServicesModule()
         {
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         #region IModule Members
@@ -24,7 +25,7 @@ namespace OceanCoursePlugin._1_CoreAndServices
         /// </summary>
         public void Initialize()
         {
-            // TODO:  Add CoreAndServicesModule.Initialize implementation
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         /// <summary>
@@ -35,10 +36,10 @@ namespace OceanCoursePlugin._1_CoreAndServices
         public void Integrate()
         {
             // Register OceanCoursePlugin._1_CoreAndServices.HelloWorldWorkstep
-            OceanCoursePlugin._1_CoreAndServices.HelloWorldWorkstep helloworldworkstepInstance = new OceanCoursePlugin._1_CoreAndServices.HelloWorldWorkstep();
+            HelloWorldWorkstep helloworldworkstepInstance = new HelloWorldWorkstep();
             PetrelSystem.WorkflowEditor.Add(helloworldworkstepInstance);
 
-            // TODO:  Add CoreAndServicesModule.Integrate implementation
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         /// <summary>
@@ -48,8 +49,7 @@ namespace OceanCoursePlugin._1_CoreAndServices
         /// </summary>
         public void IntegratePresentation()
         {
-
-            // TODO:  Add CoreAndServicesModule.IntegratePresentation implementation
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace OceanCoursePlugin._1_CoreAndServices
         /// </summary>
         public void Disintegrate()
         {
-            // TODO:  Add CoreAndServicesModule.Disintegrate implementation
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         #endregion
@@ -68,7 +68,7 @@ namespace OceanCoursePlugin._1_CoreAndServices
 
         public void Dispose()
         {
-            // TODO:  Add CoreAndServicesModule.Dispose implementation
+            CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
         #endregion

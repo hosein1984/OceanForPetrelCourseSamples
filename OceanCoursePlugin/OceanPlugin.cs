@@ -27,6 +27,7 @@ namespace OceanCoursePlugin
             get
             {
                 yield return new ModuleReference(typeof(CoreAndServicesModule));
+                yield return new ModuleReference(typeof(HelloModule));
             }
         }
 
