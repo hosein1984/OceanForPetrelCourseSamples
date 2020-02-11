@@ -8,7 +8,7 @@
     <PluginUri>http://www.pluginuri.info/</PluginUri>
     <PluginId>://OceanCoursePlugin.OceanPlugin/1.0.0.0</PluginId>
     <Trust PublicKeyToken="">Default</Trust>
-    <ReleaseDate>2020-02-09</ReleaseDate>
+    <ReleaseDate>2020-02-11</ReleaseDate>
     <Author>Hosein</Author>
     <AppVersion>2016.1</AppVersion>
     <Modules>

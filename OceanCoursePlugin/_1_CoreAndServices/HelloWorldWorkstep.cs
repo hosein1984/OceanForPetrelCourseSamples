@@ -4,6 +4,7 @@ using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
 using Slb.Ocean.Petrel.UI;
 using Slb.Ocean.Petrel.Workflow;
+using Slb.Ocean.Units;
 
 namespace OceanCoursePlugin._1_CoreAndServices
 {
@@ -74,6 +75,16 @@ namespace OceanCoursePlugin._1_CoreAndServices
             {
                 CoreLogger.Debug("Hello World from CoreLogger!");
                 PetrelLogger.InfoOutputWindow("Hello World from PetrelLogger!");
+                //
+                //
+                var unitServiceSettings = CoreSystem.GetService<IUnitServiceSettings>();
+                // even if we do not already set a coordinate reference system, this method call will pop up the window so we could select one
+                var coordinateReferenceSystemName = PetrelProject.PrimaryProject.GetCoordinateReferenceSystem().Name;
+                var coordinateReferenceSystemDescription = PetrelProject.PrimaryProject.GetCoordinateReferenceSystem().Description;
+                //
+                PetrelLogger.InfoOutputWindow(unitServiceSettings.CurrentUISystem.Name);
+                PetrelLogger.InfoOutputWindow(coordinateReferenceSystemName);
+                PetrelLogger.InfoOutputWindow(coordinateReferenceSystemDescription);
             }
         }
 

@@ -71,6 +71,7 @@ namespace OceanCoursePlugin._1_CoreAndServices
             CoreLogger.Info($"{ClassName}: {MethodBase.GetCurrentMethod().Name}");
         }
 
+        
         #endregion
 
     }
