@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OceanCoursePlugin._1_CoreAndServices;
+using OceanCoursePlugin._2_WorkflowAndWorksteps;
 using Slb.Ocean.Core;
 
 namespace OceanCoursePlugin
@@ -26,8 +27,9 @@ namespace OceanCoursePlugin
         {
             get
             {
-                yield return new ModuleReference(typeof(CoreAndServicesModule));
-                yield return new ModuleReference(typeof(HelloModule));
+                //yield return new ModuleReference(typeof(CoreAndServicesModule));
+                //yield return new ModuleReference(typeof(HelloModule));
+                yield return new ModuleReference(typeof(WorkflowAndWorkstepsModule));
             }
         }
 

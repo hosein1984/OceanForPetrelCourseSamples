@@ -12,8 +12,7 @@
     <Author>Hosein</Author>
     <AppVersion>2016.1</AppVersion>
     <Modules>
-      <Module TypeName="OceanCoursePlugin._1_CoreAndServices.CoreAndServicesModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-      <Module TypeName="OceanCoursePlugin._1_CoreAndServices.HelloModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      <Module TypeName="OceanCoursePlugin._2_WorkflowAndWorksteps.WorkflowAndWorkstepsModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </Modules>
     <Dependencies />
     <Assemblies>
