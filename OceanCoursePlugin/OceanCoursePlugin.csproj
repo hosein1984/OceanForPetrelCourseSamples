@@ -94,6 +94,7 @@
     <Compile Include="_4_DataAccessOverview\TimeUnitConvertorWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreatePointSetWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreatePolylineSetWorkstep.cs" />
+    <Compile Include="_5_DataAccessShapes\CreateRegularHeightFieldSurfaceWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\DataAccessShapesModule.cs" />
   </ItemGroup>
   <ItemGroup>

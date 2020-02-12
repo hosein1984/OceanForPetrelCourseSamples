@@ -11,6 +11,7 @@ namespace OceanCoursePlugin._5_DataAccessShapes
 {
     public class DataAccessShapesModule : IModule
     {
+        private Process m_createregularheightfieldsurfaceworkstepInstance;
         private Process m_createpolylinesetworkstepInstance;
         private Process m_createpointsetworkstepInstance;
         public void Dispose()
@@ -24,12 +25,18 @@ namespace OceanCoursePlugin._5_DataAccessShapes
 
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_createregularheightfieldsurfaceworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createpolylinesetworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createpointsetworkstepInstance);
         }
 
         public void Integrate()
         {
+            // Register OceanCoursePlugin._5_DataAccessShapes.CreateRegularHeightFieldSurfaceWorkstep
+            OceanCoursePlugin._5_DataAccessShapes.CreateRegularHeightFieldSurfaceWorkstep createregularheightfieldsurfaceworkstepInstance = new OceanCoursePlugin._5_DataAccessShapes.CreateRegularHeightFieldSurfaceWorkstep();
+            PetrelSystem.WorkflowEditor.Add(createregularheightfieldsurfaceworkstepInstance);
+            m_createregularheightfieldsurfaceworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(createregularheightfieldsurfaceworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_createregularheightfieldsurfaceworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep
             OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep createpolylinesetworkstepInstance = new OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep();
             PetrelSystem.WorkflowEditor.Add(createpolylinesetworkstepInstance);
