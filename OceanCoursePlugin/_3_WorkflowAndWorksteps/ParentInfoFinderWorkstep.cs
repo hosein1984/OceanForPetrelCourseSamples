@@ -1,12 +1,11 @@
 using System;
-
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
 using Slb.Ocean.Petrel.Basics;
 using Slb.Ocean.Petrel.UI;
 using Slb.Ocean.Petrel.Workflow;
 
-namespace OceanCoursePlugin._2_WorkflowAndWorksteps
+namespace OceanCoursePlugin._3_WorkflowAndWorksteps
 {
     /// <summary>
     /// This class contains all the methods and subclasses of the ParentInfoFinderWorkstep.

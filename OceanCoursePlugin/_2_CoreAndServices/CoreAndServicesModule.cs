@@ -2,7 +2,7 @@ using System.Reflection;
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
 
-namespace OceanCoursePlugin._1_CoreAndServices
+namespace OceanCoursePlugin._2_CoreAndServices
 {
     /// <summary>
     /// This class will control the lifecycle of the Module.

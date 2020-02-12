@@ -1,9 +1,8 @@
-﻿using System;
-using Slb.Ocean.Core;
+﻿using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
 using Slb.Ocean.Petrel.Workflow;
 
-namespace OceanCoursePlugin._2_WorkflowAndWorksteps
+namespace OceanCoursePlugin._3_WorkflowAndWorksteps
 {
     class WorkflowAndWorkstepsModule : IModule
     {

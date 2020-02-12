@@ -1,12 +1,11 @@
 using System;
-
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
 using Slb.Ocean.Petrel.UI;
 using Slb.Ocean.Petrel.Workflow;
 using Slb.Ocean.Units;
 
-namespace OceanCoursePlugin._1_CoreAndServices
+namespace OceanCoursePlugin._2_CoreAndServices
 {
     /// <summary>
     /// This class contains all the methods and subclasses of the HelloWorldWorkstep.
