@@ -90,6 +90,7 @@
     <Compile Include="_4_DataAccessOverview\CreateTimeTemplateWorkstep.cs" />
     <Compile Include="_4_DataAccessOverview\DataAccessOverviewModule.cs" />
     <Compile Include="_4_DataAccessOverview\ListAllWellsInProjectWorkstep.cs" />
+    <Compile Include="_4_DataAccessOverview\TimeUnitConvertorWorkstep.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

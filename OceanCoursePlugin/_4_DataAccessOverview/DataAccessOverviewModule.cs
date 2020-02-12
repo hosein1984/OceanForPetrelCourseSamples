@@ -6,6 +6,7 @@ namespace OceanCoursePlugin._4_DataAccessOverview
 {
     public class DataAccessOverviewModule : IModule
     {
+        private Process m_timeunitconvertorworkstepInstance;
         private Process m_createtimetemplateworkstepInstance;
         private Process m_listallwellsinprojectworkstepInstance;
         public void Dispose()
@@ -18,12 +19,18 @@ namespace OceanCoursePlugin._4_DataAccessOverview
 
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_timeunitconvertorworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createtimetemplateworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_listallwellsinprojectworkstepInstance);
         }
 
         public void Integrate()
         {
+            // Register OceanCoursePlugin._4_DataAccessOverview.TimeUnitConvertorWorkstep
+            OceanCoursePlugin._4_DataAccessOverview.TimeUnitConvertorWorkstep timeunitconvertorworkstepInstance = new OceanCoursePlugin._4_DataAccessOverview.TimeUnitConvertorWorkstep();
+            PetrelSystem.WorkflowEditor.Add(timeunitconvertorworkstepInstance);
+            m_timeunitconvertorworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(timeunitconvertorworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_timeunitconvertorworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._4_DataAccessOverview.CreateTimeTemplateWorkstep
             OceanCoursePlugin._4_DataAccessOverview.CreateTimeTemplateWorkstep createtimetemplateworkstepInstance = new OceanCoursePlugin._4_DataAccessOverview.CreateTimeTemplateWorkstep();
             PetrelSystem.WorkflowEditor.Add(createtimetemplateworkstepInstance);
