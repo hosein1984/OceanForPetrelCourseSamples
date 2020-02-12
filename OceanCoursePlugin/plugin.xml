@@ -12,7 +12,7 @@
     <Author>Hosein</Author>
     <AppVersion>2016.1</AppVersion>
     <Modules>
-      <Module TypeName="OceanCoursePlugin._4_DataAccessOverview.DataAccessOverviewModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      <Module TypeName="OceanCoursePlugin._5_DataAccessShapes.DataAccessShapesModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </Modules>
     <Dependencies />
     <Assemblies>
