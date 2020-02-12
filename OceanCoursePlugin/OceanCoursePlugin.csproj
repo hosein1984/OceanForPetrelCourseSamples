@@ -87,6 +87,7 @@
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
     <Compile Include="_3_WorkflowAndWorksteps\ParentInfoFinderWorkstep.cs" />
     <Compile Include="_3_WorkflowAndWorksteps\WorkflowAndWorkstepsModule.cs" />
+    <Compile Include="_4_DataAccessOverview\CreateTimeTemplateWorkstep.cs" />
     <Compile Include="_4_DataAccessOverview\DataAccessOverviewModule.cs" />
     <Compile Include="_4_DataAccessOverview\ListAllWellsInProjectWorkstep.cs" />
   </ItemGroup>
