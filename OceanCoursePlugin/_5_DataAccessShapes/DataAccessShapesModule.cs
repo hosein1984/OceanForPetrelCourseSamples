@@ -11,6 +11,7 @@ namespace OceanCoursePlugin._5_DataAccessShapes
 {
     public class DataAccessShapesModule : IModule
     {
+        private Process m_createpolylinesetworkstepInstance;
         private Process m_createpointsetworkstepInstance;
         public void Dispose()
         {
@@ -23,11 +24,17 @@ namespace OceanCoursePlugin._5_DataAccessShapes
 
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_createpolylinesetworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createpointsetworkstepInstance);
         }
 
         public void Integrate()
         {
+            // Register OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep
+            OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep createpolylinesetworkstepInstance = new OceanCoursePlugin._5_DataAccessShapes.CreatePolylineSetWorkstep();
+            PetrelSystem.WorkflowEditor.Add(createpolylinesetworkstepInstance);
+            m_createpolylinesetworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(createpolylinesetworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_createpolylinesetworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._5_DataAccessShapes.CreatePointSetWorkstep
             OceanCoursePlugin._5_DataAccessShapes.CreatePointSetWorkstep createpointsetworkstepInstance = new OceanCoursePlugin._5_DataAccessShapes.CreatePointSetWorkstep();
             PetrelSystem.WorkflowEditor.Add(createpointsetworkstepInstance);

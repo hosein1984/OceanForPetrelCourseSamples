@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="OceanPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="_4_DataAccessOverview\ListAllWellsInProjectWorkstep.cs" />
     <Compile Include="_4_DataAccessOverview\TimeUnitConvertorWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreatePointSetWorkstep.cs" />
+    <Compile Include="_5_DataAccessShapes\CreatePolylineSetWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\DataAccessShapesModule.cs" />
   </ItemGroup>
   <ItemGroup>
