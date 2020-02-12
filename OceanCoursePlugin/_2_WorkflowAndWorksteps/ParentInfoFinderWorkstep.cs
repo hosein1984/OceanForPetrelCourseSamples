@@ -38,13 +38,8 @@ namespace OceanCoursePlugin._2_WorkflowAndWorksteps
         /// <summary>
         /// Gets the unique identifier for this Workstep.
         /// </summary>
-        protected override string UniqueIdCore
-        {
-            get
-            {
-                return "36b0523b-6c2a-4ce8-ae38-7914e110a5a9";
-            }
-        }
+        protected override string UniqueIdCore => "OceanCoursePlugin._2_WorkflowAndWorksteps.ParentInfoFinderWorkstep";
+
         #endregion
 
         #region IExecutorSource Members and Executor class
