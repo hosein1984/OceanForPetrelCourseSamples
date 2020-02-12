@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="OceanPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
     <Compile Include="_3_WorkflowAndWorksteps\ParentInfoFinderWorkstep.cs" />
     <Compile Include="_3_WorkflowAndWorksteps\WorkflowAndWorkstepsModule.cs" />
+    <Compile Include="_4_DataAccessOverview\DataAccessOverviewModule.cs" />
+    <Compile Include="_4_DataAccessOverview\ListAllWellsInProjectWorkstep.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
