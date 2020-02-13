@@ -34,7 +34,8 @@ namespace OceanCoursePlugin
                 //yield return new ModuleReference(typeof(WorkflowAndWorkstepsModule));
                 //yield return new ModuleReference(typeof(DataAccessOverviewModule));
                 //yield return new ModuleReference(typeof(DataAccessShapesModule));
-                yield return new ModuleReference(typeof(DataAccessWellsAndLogsModule));
+                //yield return new ModuleReference(typeof(DataAccessWellsAndLogsModule));
+                yield return new ModuleReference(typeof(_9_DataAccessPillarGrid.DataAccessPillarGridModule));
             }
         }
 
