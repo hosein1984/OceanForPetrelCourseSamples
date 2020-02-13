@@ -42,6 +42,7 @@
       <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Coordinates.dll</HintPath>
     </Reference>
     <Reference Include="Slb.Ocean.Data, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Configuration, Version=16.1.0.0, Culture=neutral, PublicKeyToken=d42cec326f61051f, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.Well, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Petrel.Well.dll</HintPath>
@@ -97,6 +98,8 @@
     <Compile Include="_5_DataAccessShapes\CreatePolylineSetWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreateRegularHeightFieldSurfaceWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\DataAccessShapesModule.cs" />
+    <Compile Include="_8_DataAccessWellsAndLogs\CreateWellPathWorkstep.cs" />
+    <Compile Include="_8_DataAccessWellsAndLogs\DataAccessWellsAndLogsModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
