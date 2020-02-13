@@ -102,6 +102,7 @@
     <Compile Include="_8_DataAccessWellsAndLogs\CopyWellLogWithMultiplier.cs" />
     <Compile Include="_8_DataAccessWellsAndLogs\CreateWellPathWorkstep.cs" />
     <Compile Include="_8_DataAccessWellsAndLogs\DataAccessWellsAndLogsModule.cs" />
+    <Compile Include="_9_DataAccessPillarGrid\CreateDistanceAboveContactPropertyWorkstep.cs" />
     <Compile Include="_9_DataAccessPillarGrid\DataAccessPillarGridModule.cs" />
     <Compile Include="_9_DataAccessPillarGrid\HelloGridWorkstep.cs" />
   </ItemGroup>

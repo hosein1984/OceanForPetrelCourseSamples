@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._9_DataAccessPillarGrid
     /// </summary>
     public class DataAccessPillarGridModule : IModule
     {
+        private Process m_createdistanceabovecontactpropertyworkstepInstance;
         private Process m_hellogridworkstepInstance;
         public DataAccessPillarGridModule()
         {
@@ -38,6 +39,11 @@ namespace OceanCoursePlugin._9_DataAccessPillarGrid
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._9_DataAccessPillarGrid.CreateDistanceAboveContactPropertyWorkstep
+            OceanCoursePlugin._9_DataAccessPillarGrid.CreateDistanceAboveContactPropertyWorkstep createdistanceabovecontactpropertyworkstepInstance = new OceanCoursePlugin._9_DataAccessPillarGrid.CreateDistanceAboveContactPropertyWorkstep();
+            PetrelSystem.WorkflowEditor.Add(createdistanceabovecontactpropertyworkstepInstance);
+            m_createdistanceabovecontactpropertyworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(createdistanceabovecontactpropertyworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_createdistanceabovecontactpropertyworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._9_DataAccessPillarGrid.HelloGridWorkstep
             OceanCoursePlugin._9_DataAccessPillarGrid.HelloGridWorkstep hellogridworkstepInstance = new OceanCoursePlugin._9_DataAccessPillarGrid.HelloGridWorkstep();
             PetrelSystem.WorkflowEditor.Add(hellogridworkstepInstance);
@@ -65,6 +71,7 @@ namespace OceanCoursePlugin._9_DataAccessPillarGrid
         /// </summary>
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_createdistanceabovecontactpropertyworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_hellogridworkstepInstance);
             // TODO:  Add DataAccessPillarGridModule.Disintegrate implementation
         }
