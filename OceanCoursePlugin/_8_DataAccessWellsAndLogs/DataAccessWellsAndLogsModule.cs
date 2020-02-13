@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._8_DataAccessWellsAndLogs
     /// </summary>
     public class DataAccessWellsAndLogsModule : IModule
     {
+        private Process m_copywelllogwithmultiplierInstance;
         private Process m_createwellpathworkstepInstance;
         public DataAccessWellsAndLogsModule()
         {
@@ -38,6 +39,11 @@ namespace OceanCoursePlugin._8_DataAccessWellsAndLogs
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._8_DataAccessWellsAndLogs.CopyWellLogWithMultiplier
+            OceanCoursePlugin._8_DataAccessWellsAndLogs.CopyWellLogWithMultiplier copywelllogwithmultiplierInstance = new OceanCoursePlugin._8_DataAccessWellsAndLogs.CopyWellLogWithMultiplier();
+            PetrelSystem.WorkflowEditor.Add(copywelllogwithmultiplierInstance);
+            m_copywelllogwithmultiplierInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(copywelllogwithmultiplierInstance);
+            PetrelSystem.ProcessDiagram.Add(m_copywelllogwithmultiplierInstance, "Plug-ins");
             // Register OceanCoursePlugin._8_DataAccessWellsAndLogs.CreateWellPathWorkstep
             OceanCoursePlugin._8_DataAccessWellsAndLogs.CreateWellPathWorkstep createwellpathworkstepInstance = new OceanCoursePlugin._8_DataAccessWellsAndLogs.CreateWellPathWorkstep();
             PetrelSystem.WorkflowEditor.Add(createwellpathworkstepInstance);
@@ -65,6 +71,7 @@ namespace OceanCoursePlugin._8_DataAccessWellsAndLogs
         /// </summary>
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_copywelllogwithmultiplierInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createwellpathworkstepInstance);
             // TODO:  Add DataAccessWellsAndLogsModule.Disintegrate implementation
         }
