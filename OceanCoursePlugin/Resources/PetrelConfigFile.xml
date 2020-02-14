@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Configuration Type="Configuration.ConfigurationState" Version="1.0.0.12" Caption="Configuration">
   <Extensions Type="Extensibility.ExtensionCollection">
     <Workspaces.WorkspaceExtension EntityId="48dc09bc-f220-45c4-beb3-f6d8e4bb4a81" />
@@ -43,6 +43,9 @@
                 <AssociatedEnd Role="CommandInfo">
                   <Entities Type="Entities">
                     <EntityId Value="478c20bb-ad9a-4a99-9469-cc09801534b9" />
+                    <EntityId Value="6fe67be1-f7a4-4bce-a5a2-96e02b26fe41" />
+                    <EntityId Value="9741cc75-5c32-4e39-9ee8-edf39462d489" />
+                    <EntityId Value="90635435-0ca5-44a6-8c41-cdf7cb3494e9" />
                   </Entities>
                 </AssociatedEnd>
               </AssociatedEnds>
@@ -87,6 +90,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="6fe67be1-f7a4-4bce-a5a2-96e02b26fe41" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._12_UICustomizations.DisplaySelectedWellsCommandHandler" Type="Commands.SimpleCommand">
@@ -98,6 +115,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="9741cc75-5c32-4e39-9ee8-edf39462d489" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._12_UICustomizations.AccessCommandHandler" Type="Commands.GroupCommand">
@@ -109,10 +140,33 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="90635435-0ca5-44a6-8c41-cdf7cb3494e9" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
       </Commands>
-      <CommandGroups Type="Commands.CommandGroupCollection" />
+      <CommandGroups Type="Commands.CommandGroupCollection">
+        <CommandGroup Id="Platform.CommandGroups.InsertObjects">
+          <CommandItems Type="Commands.CommandItemCollection">
+            <Commands.CommandItem CommandId="OceanCoursePlugin._12_UICustomizations.HelloOceanWithoutWizardCommandHandler" />
+          </CommandItems>
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension />
+          </Extensions>
+        </CommandGroup>
+      </CommandGroups>
     </Commands.CommandSection>
     <ToolContainers.RibbonSection Version="1.0.0.10">
       <Extensions Type="Extensibility.ExtensionCollection">
