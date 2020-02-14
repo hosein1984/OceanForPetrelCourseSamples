@@ -102,6 +102,8 @@
     <Compile Include="_5_DataAccessShapes\DataAccessShapesModule.cs" />
     <Compile Include="_6_DataAccessSeismicData\DataAccessSeismicDataModule.cs" />
     <Compile Include="_6_DataAccessSeismicData\PrintSeismicCubeCornersWorkstep.cs" />
+    <Compile Include="_7_DataAccessSeismicInterpretation\DataAccessSeismicInterpretationModule.cs" />
+    <Compile Include="_7_DataAccessSeismicInterpretation\SeismicInterpretationWorkstep.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
