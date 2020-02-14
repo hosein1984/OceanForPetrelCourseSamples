@@ -4,6 +4,7 @@ using System.Linq;
 using OceanCoursePlugin._3_WorkflowAndWorksteps;
 using OceanCoursePlugin._4_DataAccessOverview;
 using OceanCoursePlugin._5_DataAccessShapes;
+using OceanCoursePlugin._6_DataAccessSeismicData;
 using Slb.Ocean.Core;
 
 namespace OceanCoursePlugin
@@ -32,7 +33,8 @@ namespace OceanCoursePlugin
                 //yield return new ModuleReference(typeof(HelloModule));
                 //yield return new ModuleReference(typeof(WorkflowAndWorkstepsModule));
                 //yield return new ModuleReference(typeof(DataAccessOverviewModule));
-                yield return new ModuleReference(typeof(DataAccessShapesModule));
+                //yield return new ModuleReference(typeof(DataAccessShapesModule));
+                yield return new ModuleReference(typeof(DataAccessSeismicDataModule));
             }
         }
 
