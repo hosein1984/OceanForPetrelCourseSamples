@@ -24,7 +24,7 @@ namespace OceanCoursePlugin._12_UICustomizations
 
         public override void Execute(Slb.Ocean.Petrel.Contexts.Context context)
         {
-            PetrelLogger.InfoOutputWindow("Executing " + typeof(DisplaySelectedWellsCommandHandler));
+            PetrelLogger.InfoOutputWindow("Executing " + typeof(DisplaySelectedWellsCommandHandler).Name);
             //
             IEnumerable<object> selectedObjects = context.GetSelectedObjects();
             //

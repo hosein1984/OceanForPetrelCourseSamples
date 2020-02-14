@@ -97,6 +97,7 @@
     <Compile Include="_10_DataAccessSimulation\RunCaseWorkstep.cs" />
     <Compile Include="_11_UIOverview\ProgressDemoWorkstep.cs" />
     <Compile Include="_11_UIOverview\UIOverviewModule.cs" />
+    <Compile Include="_12_UICustomizations\AccessCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\DisplaySelectedWellsCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\HelloOceanWithoutWizardCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\HelloOceanWithWizardCommandHandler.cs" />

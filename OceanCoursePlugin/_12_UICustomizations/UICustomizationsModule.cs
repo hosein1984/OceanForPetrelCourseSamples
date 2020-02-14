@@ -38,6 +38,8 @@ namespace OceanCoursePlugin._12_UICustomizations
         /// </summary>
         public void Integrate()
         {
+            // Register AccessCommandHandler
+            PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._12_UICustomizations.AccessCommandHandler.ID, new OceanCoursePlugin._12_UICustomizations.AccessCommandHandler());
             // Register DisplaySelectedWellsCommandHandler
             PetrelSystem.CommandManager.CreateCommand(DisplaySelectedWellsCommandHandler.ID, new DisplaySelectedWellsCommandHandler());
             // Register HelloOceanWithWizardCommandHandler
