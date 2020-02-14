@@ -107,6 +107,8 @@
     <Compile Include="_5_DataAccessShapes\DataAccessShapesModule.cs" />
     <Compile Include="_6_DataAccessSeismicData\DataAccessSeismicDataModule.cs" />
     <Compile Include="_6_DataAccessSeismicData\PrintSeismicCubeCornersWorkstep.cs" />
+    <Compile Include="_7_DataAccessSeismicInterpretation\DataAccessSeismicInterpretationModule.cs" />
+    <Compile Include="_7_DataAccessSeismicInterpretation\SeismicInterpretationWorkstep.cs" />
     <Compile Include="_8_DataAccessWellsAndLogs\CopyWellLogWithMultiplier.cs" />
     <Compile Include="_8_DataAccessWellsAndLogs\CreateWellPathWorkstep.cs" />
     <Compile Include="_8_DataAccessWellsAndLogs\DataAccessWellsAndLogsModule.cs" />
