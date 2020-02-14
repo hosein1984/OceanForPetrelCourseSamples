@@ -87,11 +87,19 @@
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="OceanPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="_10_DataAccessSimulation\CreateSimulationCaseWorkstep.cs" />
     <Compile Include="_10_DataAccessSimulation\DataAccessSimulationModule.cs" />
     <Compile Include="_10_DataAccessSimulation\RunCaseWorkstep.cs" />
     <Compile Include="_11_UIOverview\ProgressDemoWorkstep.cs" />
     <Compile Include="_11_UIOverview\UIOverviewModule.cs" />
+    <Compile Include="_12_UICustomizations\HelloOceanWithoutWizardCommandHandler.cs" />
+    <Compile Include="_12_UICustomizations\HelloOceanWithWizardCommandHandler.cs" />
+    <Compile Include="_12_UICustomizations\UICustomizationsModule.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
@@ -135,7 +143,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PetrelConfigFile.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>del "$(ProjectDir)\plugin.xml"
