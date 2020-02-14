@@ -90,6 +90,8 @@
     <Compile Include="_10_DataAccessSimulation\CreateSimulationCaseWorkstep.cs" />
     <Compile Include="_10_DataAccessSimulation\DataAccessSimulationModule.cs" />
     <Compile Include="_10_DataAccessSimulation\RunCaseWorkstep.cs" />
+    <Compile Include="_11_UIOverview\ProgressDemoWorkstep.cs" />
+    <Compile Include="_11_UIOverview\UIOverviewModule.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
