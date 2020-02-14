@@ -95,6 +95,7 @@
     <Compile Include="_4_DataAccessOverview\ListAllWellsInProjectWorkstep.cs" />
     <Compile Include="_4_DataAccessOverview\TimeUnitConvertorWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\AddAzimuthPropertyToPointSet.cs" />
+    <Compile Include="_6_DataAccessSeismicData\CopySeismicCubeWithReversedPolarityWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreatePointSetWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreatePolylineSetWorkstep.cs" />
     <Compile Include="_5_DataAccessShapes\CreateRegularHeightFieldSurfaceWorkstep.cs" />

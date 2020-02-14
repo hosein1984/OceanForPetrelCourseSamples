@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._6_DataAccessSeismicData
     /// </summary>
     public class DataAccessSeismicDataModule : IModule
     {
+        private Process m_copyseismiccubewithreversedpolarityworkstepInstance;
         private Process m_printseismiccubecornersworkstepInstance;
         public DataAccessSeismicDataModule()
         {
@@ -38,6 +39,11 @@ namespace OceanCoursePlugin._6_DataAccessSeismicData
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._5_DataAccessShapes.CopySeismicCubeWithReversedPolarityWorkstep
+            CopySeismicCubeWithReversedPolarityWorkstep copyseismiccubewithreversedpolarityworkstepInstance = new CopySeismicCubeWithReversedPolarityWorkstep();
+            PetrelSystem.WorkflowEditor.Add(copyseismiccubewithreversedpolarityworkstepInstance);
+            m_copyseismiccubewithreversedpolarityworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(copyseismiccubewithreversedpolarityworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_copyseismiccubewithreversedpolarityworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._6_DataAccessSeismicData.PrintSeismicCubeCornersWorkstep
             OceanCoursePlugin._6_DataAccessSeismicData.PrintSeismicCubeCornersWorkstep printseismiccubecornersworkstepInstance = new OceanCoursePlugin._6_DataAccessSeismicData.PrintSeismicCubeCornersWorkstep();
             PetrelSystem.WorkflowEditor.Add(printseismiccubecornersworkstepInstance);
@@ -65,6 +71,7 @@ namespace OceanCoursePlugin._6_DataAccessSeismicData
         /// </summary>
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_copyseismiccubewithreversedpolarityworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_printseismiccubecornersworkstepInstance);
             // TODO:  Add DataAccessSeismicDataModule.Disintegrate implementation
         }
