@@ -101,6 +101,7 @@
     <Compile Include="_12_UICustomizations\DisplaySelectedWellsCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\HelloOceanWithoutWizardCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\HelloOceanWithWizardCommandHandler.cs" />
+    <Compile Include="_12_UICustomizations\PrintWellMDRangeCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\UICustomizationsModule.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />

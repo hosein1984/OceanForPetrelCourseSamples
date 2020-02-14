@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration Type="Configuration.ConfigurationState" Version="1.0.0.12" Caption="Configuration">
   <Extensions Type="Extensibility.ExtensionCollection">
     <Workspaces.WorkspaceExtension EntityId="48dc09bc-f220-45c4-beb3-f6d8e4bb4a81" />
@@ -156,6 +156,17 @@
             </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
+        <CommandInfo Id="OceanCoursePlugin._12_UICustomizations.PrintWellMDRangeCommandHandler" Type="Commands.SimpleCommand">
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension>
+              <Attributes Type="Attributes.AttributeCollection">
+                <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Print MD Range" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.32" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_32.png}" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
+              </Attributes>
+            </Attributes.AttributesExtension>
+          </Extensions>
+        </CommandInfo>
       </Commands>
       <CommandGroups Type="Commands.CommandGroupCollection">
         <CommandGroup Id="Platform.CommandGroups.InsertObjects">
@@ -163,7 +174,9 @@
             <Commands.CommandItem CommandId="OceanCoursePlugin._12_UICustomizations.HelloOceanWithoutWizardCommandHandler" />
           </CommandItems>
           <Extensions Type="Extensibility.ExtensionCollection">
-            <Attributes.AttributesExtension />
+            <Attributes.AttributesExtension>
+              <Attributes Type="Attributes.AttributeCollection" />
+            </Attributes.AttributesExtension>
           </Extensions>
         </CommandGroup>
       </CommandGroups>

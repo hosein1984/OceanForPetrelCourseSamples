@@ -2,7 +2,10 @@ using System;
 using OceanCoursePlugin.Properties;
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
+using Slb.Ocean.Petrel.Commands;
+using Slb.Ocean.Petrel.DomainObject.Well;
 using Slb.Ocean.Petrel.UI;
+using Slb.Ocean.Petrel.UI.Tools;
 using Slb.Ocean.Petrel.Workflow;
 
 namespace OceanCoursePlugin._12_UICustomizations
@@ -38,8 +41,10 @@ namespace OceanCoursePlugin._12_UICustomizations
         /// </summary>
         public void Integrate()
         {
+            // Register PrintWellMDRangeCommandHandler
+            PetrelSystem.CommandManager.CreateCommand(PrintWellMDRangeCommandHandler.ID, new PrintWellMDRangeCommandHandler());
             // Register AccessCommandHandler
-            PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._12_UICustomizations.AccessCommandHandler.ID, new OceanCoursePlugin._12_UICustomizations.AccessCommandHandler());
+            PetrelSystem.CommandManager.CreateCommand(AccessCommandHandler.ID, new AccessCommandHandler());
             // Register DisplaySelectedWellsCommandHandler
             PetrelSystem.CommandManager.CreateCommand(DisplaySelectedWellsCommandHandler.ID, new DisplaySelectedWellsCommandHandler());
             // Register HelloOceanWithWizardCommandHandler
@@ -58,6 +63,11 @@ namespace OceanCoursePlugin._12_UICustomizations
         public void IntegratePresentation()
         {
             PetrelSystem.ConfigurationService.AddConfiguration(Resources.PetrelConfigFile);
+            //
+            // Add PrintWellMDRangeCommand to context menu
+            CommandItem printWellMDRangeCommandItem = new CommandItem(PrintWellMDRangeCommandHandler.ID);
+            var printWellMDRangeContextMenuHandler = new SimpleCommandContextMenuHandler<Borehole>(printWellMDRangeCommandItem);
+            PetrelSystem.ToolService.AddCommandContextMenuHandler(printWellMDRangeContextMenuHandler);
         }
 
         /// <summary>
