@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._10_DataAccessSimulation
     /// </summary>
     public class DataAccessSimulationModule : IModule
     {
+        private Process m_runcaseworkstepInstance;
         private Process m_createsimulationcaseworkstepInstance;
         public DataAccessSimulationModule()
         {
@@ -38,6 +39,11 @@ namespace OceanCoursePlugin._10_DataAccessSimulation
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._10_DataAccessSimulation.RunCaseWorkstep
+            OceanCoursePlugin._10_DataAccessSimulation.RunCaseWorkstep runcaseworkstepInstance = new OceanCoursePlugin._10_DataAccessSimulation.RunCaseWorkstep();
+            PetrelSystem.WorkflowEditor.Add(runcaseworkstepInstance);
+            m_runcaseworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(runcaseworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_runcaseworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._10_DataAccessSimulation.CreateSimulationCaseWorkstep
             OceanCoursePlugin._10_DataAccessSimulation.CreateSimulationCaseWorkstep createsimulationcaseworkstepInstance = new OceanCoursePlugin._10_DataAccessSimulation.CreateSimulationCaseWorkstep();
             PetrelSystem.WorkflowEditor.Add(createsimulationcaseworkstepInstance);
@@ -65,6 +71,7 @@ namespace OceanCoursePlugin._10_DataAccessSimulation
         /// </summary>
         public void Disintegrate()
         {
+            PetrelSystem.ProcessDiagram.Remove(m_runcaseworkstepInstance);
             PetrelSystem.ProcessDiagram.Remove(m_createsimulationcaseworkstepInstance);
             // TODO:  Add DataAccessSimulationModule.Disintegrate implementation
         }
