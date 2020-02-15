@@ -104,6 +104,8 @@
     <Compile Include="_12_UICustomizations\HelloOceanWithWizardCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\PrintWellMDRangeCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\UICustomizationsModule.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\HelloWorldCommandHandler.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\HelloWorldGroupCommandHandler.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UIAdvancedCustomizationsModule.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UpdateWellNameTextCommandHandler.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
