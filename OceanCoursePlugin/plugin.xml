@@ -8,11 +8,11 @@
     <PluginUri>http://www.pluginuri.info/</PluginUri>
     <PluginId>://OceanCoursePlugin.OceanPlugin/1.0.0.0</PluginId>
     <Trust PublicKeyToken="">Default</Trust>
-    <ReleaseDate>2020-02-14</ReleaseDate>
+    <ReleaseDate>2020-02-15</ReleaseDate>
     <Author>Hosein</Author>
     <AppVersion>2016.1</AppVersion>
     <Modules>
-      <Module TypeName="OceanCoursePlugin._12_UICustomizations.UICustomizationsModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      <Module TypeName="OceanCoursePlugin._13_UIAdvancedCustomizations.UIAdvancedCustomizationsModule, OceanCoursePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     </Modules>
     <Dependencies />
     <Assemblies>

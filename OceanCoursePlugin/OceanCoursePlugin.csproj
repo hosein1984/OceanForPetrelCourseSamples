@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Extensions\ListExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="OceanPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -103,6 +104,8 @@
     <Compile Include="_12_UICustomizations\HelloOceanWithWizardCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\PrintWellMDRangeCommandHandler.cs" />
     <Compile Include="_12_UICustomizations\UICustomizationsModule.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\UIAdvancedCustomizationsModule.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\UpdateWellNameTextCommandHandler.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
@@ -155,6 +158,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\PetrelConfigFile.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>del "$(ProjectDir)\plugin.xml"

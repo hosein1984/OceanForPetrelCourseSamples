@@ -4,6 +4,7 @@ using System.Linq;
 using OceanCoursePlugin._10_DataAccessSimulation;
 using OceanCoursePlugin._11_UIOverview;
 using OceanCoursePlugin._12_UICustomizations;
+using OceanCoursePlugin._13_UIAdvancedCustomizations;
 using OceanCoursePlugin._3_WorkflowAndWorksteps;
 using OceanCoursePlugin._4_DataAccessOverview;
 using OceanCoursePlugin._5_DataAccessShapes;
@@ -47,7 +48,8 @@ namespace OceanCoursePlugin
                 //yield return new ModuleReference(typeof(DataAccessPillarGridModule));
                 //yield return new ModuleReference(typeof(DataAccessSimulationModule));
                 //yield return new ModuleReference(typeof(UIOverviewModule));
-                yield return new ModuleReference(typeof(UICustomizationsModule));
+                //yield return new ModuleReference(typeof(UICustomizationsModule));
+                yield return new ModuleReference(typeof(UIAdvancedCustomizationsModule));
             }
         }
 

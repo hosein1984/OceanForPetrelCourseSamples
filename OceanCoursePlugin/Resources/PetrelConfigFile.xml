@@ -167,6 +167,17 @@
             </Attributes.AttributesExtension>
           </Extensions>
         </CommandInfo>
+        <CommandInfo Id="OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler" Type="Commands.TextCommand">
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension>
+              <Attributes Type="Attributes.AttributeCollection">
+                <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="UpdateWellNameTextCommandHandler" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.32" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_32.png}" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
+              </Attributes>
+            </Attributes.AttributesExtension>
+          </Extensions>
+        </CommandInfo>
       </Commands>
       <CommandGroups Type="Commands.CommandGroupCollection">
         <CommandGroup Id="Platform.CommandGroups.InsertObjects">
@@ -330,6 +341,27 @@
                           <Attributes Type="Attributes.AttributeCollection">
                             <Attributes.AttributeValue AttributeId="Appearance.ToolStyle" ValueType="Tools.ToolStyle" Value="SmallImageAndText" />
                             <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Access" />
+                          </Attributes>
+                        </Attributes.AttributesExtension>
+                      </Extensions>
+                    </Tools.ButtonTool>
+                  </Tools>
+                </ToolContainers.RibbonTabGroup>
+                <ToolContainers.RibbonTabGroup Id="a137416e-5524-4faf-b2d2-1c9bb8f31fe9">
+                  <Extensions Type="Extensibility.ExtensionCollection">
+                    <Attributes.AttributesExtension>
+                      <Attributes Type="Attributes.AttributeCollection">
+                        <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Advanced" />
+                      </Attributes>
+                    </Attributes.AttributesExtension>
+                  </Extensions>
+                  <Tools Type="Tools.ToolCollection">
+                    <Tools.ButtonTool CommandId="OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler">
+                      <Extensions Type="Extensibility.ExtensionCollection">
+                        <Attributes.AttributesExtension>
+                          <Attributes Type="Attributes.AttributeCollection">
+                            <Attributes.AttributeValue AttributeId="Appearance.ToolStyle" ValueType="Tools.ToolStyle" Value="SmallImageAndText" />
+                            <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="UpdateWellNameTextCommandHandler" />
                           </Attributes>
                         </Attributes.AttributesExtension>
                       </Extensions>
