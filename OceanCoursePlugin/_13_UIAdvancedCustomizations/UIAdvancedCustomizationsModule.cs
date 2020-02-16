@@ -2,6 +2,8 @@ using System;
 using OceanCoursePlugin.Properties;
 using Slb.Ocean.Core;
 using Slb.Ocean.Petrel;
+using Slb.Ocean.Petrel.DomainObject.Well;
+using Slb.Ocean.Petrel.Rules;
 using Slb.Ocean.Petrel.UI;
 using Slb.Ocean.Petrel.Workflow;
 
@@ -48,8 +50,12 @@ namespace OceanCoursePlugin._13_UIAdvancedCustomizations
             PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldCommandHandler.ID, new OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldCommandHandler());
             // Register UpdateWellNameTextCommandHandler
             PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler.ID, new OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler());
-
-            // TODO:  Add UIAdvancedCustomizationsModule.Integrate implementation
+            //
+            // Adds SelectedWell Tab Rule
+            var boreholeSelectionRuleHandler = new SelectionRuleHandler(typeof(Borehole));
+            PetrelSystem.RuleManager.CreateRule(
+                "OceanCoursePlugin._13_UIAdvancedCustomizations.BoreholeSelectionRuleHandler",
+                boreholeSelectionRuleHandler);
         }
 
         /// <summary>

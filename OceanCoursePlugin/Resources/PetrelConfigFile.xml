@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Configuration Type="Configuration.ConfigurationState" Version="1.0.0.12" Caption="Configuration">
   <Extensions Type="Extensibility.ExtensionCollection">
     <Workspaces.WorkspaceExtension EntityId="48dc09bc-f220-45c4-beb3-f6d8e4bb4a81" />
@@ -46,6 +46,11 @@
                     <EntityId Value="6fe67be1-f7a4-4bce-a5a2-96e02b26fe41" />
                     <EntityId Value="9741cc75-5c32-4e39-9ee8-edf39462d489" />
                     <EntityId Value="90635435-0ca5-44a6-8c41-cdf7cb3494e9" />
+                    <EntityId Value="d6504b02-2cfe-4b93-8305-a3b841f464fd" />
+                    <EntityId Value="65992bac-6db9-4556-a164-29fb0cd35cf6" />
+                    <EntityId Value="cf870821-f9bb-4778-8c75-6cf3403e3d57" />
+                    <EntityId Value="840c013a-c1f2-4a6b-bc11-69bf94d74dca" />
+                    <EntityId Value="78681c3a-03f0-43d9-93c2-b74f4e06ca7a" />
                   </Entities>
                 </AssociatedEnd>
               </AssociatedEnds>
@@ -165,6 +170,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="d6504b02-2cfe-4b93-8305-a3b841f464fd" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler" Type="Commands.TextCommand">
@@ -176,6 +195,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="65992bac-6db9-4556-a164-29fb0cd35cf6" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldCommandHandler" Type="Commands.SimpleCommand">
@@ -187,6 +220,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="cf870821-f9bb-4778-8c75-6cf3403e3d57" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldGroupCommandHandler" Type="Commands.GroupCommand">
@@ -198,6 +245,20 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="840c013a-c1f2-4a6b-bc11-69bf94d74dca" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
         <CommandInfo Id="OceanCoursePlugin._13_UIAdvancedCustomizations.MakeWellVisibleIn3DOptionCommandHandler" Type="Commands.SimpleCommand">
@@ -207,8 +268,24 @@
                 <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Make Well Visible In 3D" />
                 <Attributes.AttributeValue AttributeId="Appearance.Image.32" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_32.png}" />
                 <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
+                <Attributes.AttributeValue AttributeId="Appearance.ModifierId" ValueType="System.String" Value="OceanCoursePlugin._13_UIAdvancedCustomizations.MakeWellVisibleIn3DOptionCommandResourceModificationHandler" />
+                <Attributes.AttributeValue AttributeId="Appearance.ToolStyle" ValueType="Tools.ToolStyle" Value="LargeImageAndText" />
               </Attributes>
             </Attributes.AttributesExtension>
+            <Workspaces.WorkspaceExtension EntityId="78681c3a-03f0-43d9-93c2-b74f4e06ca7a" />
+            <Relationships.RelationshipsExtension>
+              <Associations Type="Relationships.Associations">
+                <Relationships.Association RelationshipId="CommandSection-CommandInfo" Role="CommandInfo">
+                  <AssociatedEnds Type="AssociatedEnds">
+                    <AssociatedEnd Role="CommandSection">
+                      <Entities Type="Entities">
+                        <EntityId Value="5f1ccd7a-1339-498a-8eb6-1d6e29100351" />
+                      </Entities>
+                    </AssociatedEnd>
+                  </AssociatedEnds>
+                </Relationships.Association>
+              </Associations>
+            </Relationships.RelationshipsExtension>
           </Extensions>
         </CommandInfo>
       </Commands>
@@ -218,9 +295,7 @@
             <Commands.CommandItem CommandId="OceanCoursePlugin._12_UICustomizations.HelloOceanWithoutWizardCommandHandler" />
           </CommandItems>
           <Extensions Type="Extensibility.ExtensionCollection">
-            <Attributes.AttributesExtension>
-              <Attributes Type="Attributes.AttributeCollection" />
-            </Attributes.AttributesExtension>
+            <Attributes.AttributesExtension />
           </Extensions>
         </CommandGroup>
       </CommandGroups>
@@ -276,6 +351,7 @@
                     <AssociatedEnd Role="RibbonTab">
                       <Entities Type="Entities">
                         <EntityId Value="83da8698-5d39-4424-ae60-85b78a15e430" />
+                        <EntityId Value="6524c3e6-379f-4140-9fd4-54795e0df59e" />
                       </Entities>
                     </AssociatedEnd>
                   </AssociatedEnds>
@@ -303,6 +379,7 @@
                         <AssociatedEnd Role="RibbonTabGroup">
                           <Entities Type="Entities">
                             <EntityId Value="a213b1ea-9808-4f33-bfe0-e077dbb74534" />
+                            <EntityId Value="da38f098-4d43-4d86-8a68-dc639d5cfd4d" />
                           </Entities>
                         </AssociatedEnd>
                       </AssociatedEnds>
@@ -387,6 +464,20 @@
                         <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Advanced" />
                       </Attributes>
                     </Attributes.AttributesExtension>
+                    <Workspaces.WorkspaceExtension EntityId="da38f098-4d43-4d86-8a68-dc639d5cfd4d" />
+                    <Relationships.RelationshipsExtension>
+                      <Associations Type="Relationships.Associations">
+                        <Relationships.Association RelationshipId="RibbonTab-RibbonTabGroup" Role="RibbonTabGroup">
+                          <AssociatedEnds Type="AssociatedEnds">
+                            <AssociatedEnd Role="RibbonTab">
+                              <Entities Type="Entities">
+                                <EntityId Value="83da8698-5d39-4424-ae60-85b78a15e430" />
+                              </Entities>
+                            </AssociatedEnd>
+                          </AssociatedEnds>
+                        </Relationships.Association>
+                      </Associations>
+                    </Relationships.RelationshipsExtension>
                   </Extensions>
                   <Tools Type="Tools.ToolCollection">
                     <Tools.ButtonTool CommandId="OceanCoursePlugin._13_UIAdvancedCustomizations.UpdateWellNameTextCommandHandler">
@@ -422,6 +513,30 @@
                   </Tools>
                 </ToolContainers.RibbonTabGroup>
               </TabGroups>
+            </ToolContainers.RibbonTab>
+            <ToolContainers.RibbonTab Id="1a26b856-eb63-4ca2-8753-ee08bb1ef737" RuleId="OceanCoursePlugin._13_UIAdvancedCustomizations.BoreholeSelectionRuleHandler">
+              <Extensions Type="Extensibility.ExtensionCollection">
+                <Workspaces.WorkspaceExtension EntityId="6524c3e6-379f-4140-9fd4-54795e0df59e" />
+                <Relationships.RelationshipsExtension>
+                  <Associations Type="Relationships.Associations">
+                    <Relationships.Association RelationshipId="Ribbon-RibbonTab" Role="RibbonTab">
+                      <AssociatedEnds Type="AssociatedEnds">
+                        <AssociatedEnd Role="Ribbon">
+                          <Entities Type="Entities">
+                            <EntityId Value="7aed32b1-f7c0-4c59-9dc7-66b633c2809a" />
+                          </Entities>
+                        </AssociatedEnd>
+                      </AssociatedEnds>
+                    </Relationships.Association>
+                  </Associations>
+                </Relationships.RelationshipsExtension>
+                <Attributes.AttributesExtension>
+                  <Attributes Type="Attributes.AttributeCollection">
+                    <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="Well Tab" />
+                  </Attributes>
+                </Attributes.AttributesExtension>
+              </Extensions>
+              <TabGroups Type="Extesibility.TabGroupCollection" />
             </ToolContainers.RibbonTab>
           </Tabs>
           <ContextMenu Type="ToolContainers.RibbonContextMenu">

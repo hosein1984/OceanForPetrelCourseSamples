@@ -28,23 +28,37 @@ namespace OceanCoursePlugin._13_UIAdvancedCustomizations
         {
             if (!CanExecute(context)) return;
             //
-            var window3D = context.GetActiveWindow() as Window3D;
+            var window3D = (Window3D) context.GetActiveWindow();
             //
-            // if there is alreay a well made visible by this command hide it
-            if (_selectedBorehole != Borehole.NullObject)
-            {
-                window3D?.HideObject(_selectedBorehole);
-            }
+            // hide last selected borehole
+            HideBoreholeInWindow3D(window3D, _selectedBorehole);
             //
             // then update the selected borehole
             _selectedBorehole = context.GetParameter<Borehole>(CommandParameterIds.Option);
             //
-            // and finally show the newly selected borehole
-            if (_selectedBorehole != Borehole.NullObject)
+            // show newly selected borehole
+            ShowBoreholeInWindow3D(window3D, _selectedBorehole);
+        }
+
+        private static void ShowBoreholeInWindow3D(Window3D window3D, Borehole borehole)
+        {
+            // show the borehole in the window3d if possible
+            if (borehole != Borehole.NullObject && window3D.CanShowObject(borehole))
             {
-                window3D?.ShowObject(_selectedBorehole);
+                window3D.ShowObject(borehole);
             }
         }
+
+        private static void HideBoreholeInWindow3D(Window3D window3D, Borehole borehole)
+        {
+            // if there is alreay a well made visible by this command hide it
+            if (borehole != Borehole.NullObject && window3D.IsVisible(borehole))
+            {
+                window3D.HideObject(borehole);
+            }
+        }
+
+
 
         public override IEnumerable<object> GetOptions(Context context)
         {
