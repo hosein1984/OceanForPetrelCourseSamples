@@ -38,6 +38,10 @@ namespace OceanCoursePlugin._13_UIAdvancedCustomizations
         /// </summary>
         public void Integrate()
         {
+            PetrelSystem.ResourceManager.CreateModifier(MakeWellVisibleIn3DOptionCommandResourceModificationHandler.ID,
+                new MakeWellVisibleIn3DOptionCommandResourceModificationHandler());
+            // Register MakeWellVisibleIn3DOptionCommandHandler
+            PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._13_UIAdvancedCustomizations.MakeWellVisibleIn3DOptionCommandHandler.ID, new OceanCoursePlugin._13_UIAdvancedCustomizations.MakeWellVisibleIn3DOptionCommandHandler());
             // Register HelloWorldGroupCommandHandler
             PetrelSystem.CommandManager.CreateCommand(OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldGroupCommandHandler.ID, new OceanCoursePlugin._13_UIAdvancedCustomizations.HelloWorldGroupCommandHandler());
             // Register HelloWorldCommandHandler

@@ -46,6 +46,10 @@
     <Reference Include="Slb.Ocean.Petrel.Modeling, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.ReservoirEngineering, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.Seismic, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.UI.Visualization3D, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Petrel.UI.Visualization3D.dll</HintPath>
+    </Reference>
     <Reference Include="Slb.Ocean.Petrel.Well, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Petrel.Well.dll</HintPath>
@@ -106,6 +110,8 @@
     <Compile Include="_12_UICustomizations\UICustomizationsModule.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\HelloWorldCommandHandler.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\HelloWorldGroupCommandHandler.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\MakeWellVisibleIn3DOptionCommandHandler.cs" />
+    <Compile Include="_13_UIAdvancedCustomizations\MakeWellVisibleIn3DOptionCommandResourceModificationHandler.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UIAdvancedCustomizationsModule.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UpdateWellNameTextCommandHandler.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
