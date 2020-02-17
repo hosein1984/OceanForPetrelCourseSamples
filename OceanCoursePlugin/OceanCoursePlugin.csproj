@@ -37,6 +37,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Slb.Ocean.Coordinates, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Coordinates.dll</HintPath>
@@ -85,6 +87,7 @@
       <HintPath>C:\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Geometry.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\ListExtensions.cs" />
@@ -114,6 +117,14 @@
     <Compile Include="_13_UIAdvancedCustomizations\MakeWellVisibleIn3DOptionCommandResourceModificationHandler.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UIAdvancedCustomizationsModule.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UpdateWellNameTextCommandHandler.cs" />
+    <Compile Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstep.cs" />
+    <Compile Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.designer.cs">
+      <DependentUpon>TimeUnitConversionWithCustomUIWorkstepUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_14_UIWindows\UIWindowsModule.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
@@ -162,11 +173,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.resx">
+      <DependentUpon>TimeUnitConversionWithCustomUIWorkstepUI.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\PetrelConfigFile.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>del "$(ProjectDir)\plugin.xml"
