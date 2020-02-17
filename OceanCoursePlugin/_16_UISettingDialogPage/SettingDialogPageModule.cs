@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._16_UISettingDialogPage
     /// </summary>
     public class SettingDialogPageModule : IModule
     {
+        private OceanCoursePlugin._16_UISettingDialogPage.XYZObjectSettingPageFactory m_xYZObjectSettingPageFactory;
         private Process m_printsettingdataworkstepInstance;
         public SettingDialogPageModule()
         {
@@ -38,6 +39,9 @@ namespace OceanCoursePlugin._16_UISettingDialogPage
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._16_UISettingDialogPage.XYZObjectSettingPage
+            m_xYZObjectSettingPageFactory = new OceanCoursePlugin._16_UISettingDialogPage.XYZObjectSettingPageFactory();
+            PetrelSystem.DialogBuilder.AddFactory(m_xYZObjectSettingPageFactory);
             // Register OceanCoursePlugin._16_UISettingDialogPage.PrintSettingDataWorkstep
             OceanCoursePlugin._16_UISettingDialogPage.PrintSettingDataWorkstep printsettingdataworkstepInstance = new OceanCoursePlugin._16_UISettingDialogPage.PrintSettingDataWorkstep();
             PetrelSystem.WorkflowEditor.Add(printsettingdataworkstepInstance);
@@ -65,6 +69,8 @@ namespace OceanCoursePlugin._16_UISettingDialogPage
         /// </summary>
         public void Disintegrate()
         {
+            // UnRegister OceanCoursePlugin._16_UISettingDialogPage.XYZObjectSettingPage
+            PetrelSystem.DialogBuilder.RemoveFactory(m_xYZObjectSettingPageFactory);
             PetrelSystem.ProcessDiagram.Remove(m_printsettingdataworkstepInstance);
             // TODO:  Add SettingDialogPageModule.Disintegrate implementation
         }

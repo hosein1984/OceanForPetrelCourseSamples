@@ -148,6 +148,13 @@
     <Compile Include="_15_UITrees\XYZOjectDataSourceFactory.cs" />
     <Compile Include="_16_UISettingDialogPage\PrintSettingDataWorkstep.cs" />
     <Compile Include="_16_UISettingDialogPage\SettingDialogPageModule.cs" />
+    <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPage.Designer.cs">
+      <DependentUpon>XYZObjectSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPageFactory.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
@@ -201,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.resx">
       <DependentUpon>TimeUnitConversionWithCustomUIWorkstepUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_16_UISettingDialogPage\XYZObjectSettingPage.resx">
+      <DependentUpon>XYZObjectSettingPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
