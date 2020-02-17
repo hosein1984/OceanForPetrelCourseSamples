@@ -134,6 +134,13 @@
       <DependentUpon>TimeUnitConversionWithCustomUIWorkstepUI.cs</DependentUpon>
     </Compile>
     <Compile Include="_14_UIWindows\UIWindowsModule.cs" />
+    <Compile Include="_15_UITrees\NewXYZObjectCommandHandler.cs" />
+    <Compile Include="_15_UITrees\UITreesModule.cs" />
+    <Compile Include="_15_UITrees\XYZObject.cs" />
+    <Compile Include="_15_UITrees\XYZObjectCommandHandler.cs" />
+    <Compile Include="_15_UITrees\XYZObjectFactory.cs" />
+    <Compile Include="_15_UITrees\XYZObjectImageInfo.cs" />
+    <Compile Include="_15_UITrees\XYZObjectNameInfo.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
@@ -191,6 +198,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\PetrelConfigFile.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="OceanResources\OceanRibbon.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

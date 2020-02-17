@@ -37,6 +37,7 @@ namespace OceanCoursePlugin
         {
             get
             {
+                yield return new ModuleReference(typeof(OceanCoursePlugin._15_UITrees.UITreesModule)); 
                 //yield return new ModuleReference(typeof(CoreAndServicesModule));
                 //yield return new ModuleReference(typeof(HelloModule));
                 //yield return new ModuleReference(typeof(WorkflowAndWorkstepsModule));

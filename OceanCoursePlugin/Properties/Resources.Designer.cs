@@ -64,6 +64,22 @@ namespace OceanCoursePlugin.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;Configuration Type=&quot;Configuration.ConfigurationState&quot; Version=&quot;1.0.0.12&quot; Caption=&quot;Configuration&quot;&gt;
         ///  &lt;Extensions Type=&quot;Extensibility.ExtensionCollection&quot;&gt;
+        ///    &lt;Workspaces.WorkspaceExtension EntityId=&quot;1d4a682b-a315-4ae3-82cc-2879acbc000d&quot; /&gt;
+        ///    &lt;Relationships.RelationshipsExtension&gt;
+        ///      &lt;Associations Type=&quot;Relationships.Associations&quot;&gt;
+        ///        &lt;Relationships.Association RelationshipId=&quot;Configuration-Section&quot; Role=&quot;Configuration&quot;&gt;
+        ///          &lt;AssociatedEnds Type= [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string OceanRibbon {
+            get {
+                return ResourceManager.GetString("OceanRibbon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;Configuration Type=&quot;Configuration.ConfigurationState&quot; Version=&quot;1.0.0.12&quot; Caption=&quot;Configuration&quot;&gt;
+        ///  &lt;Extensions Type=&quot;Extensibility.ExtensionCollection&quot;&gt;
         ///    &lt;Workspaces.WorkspaceExtension EntityId=&quot;48dc09bc-f220-45c4-beb3-f6d8e4bb4a81&quot; /&gt;
         ///    &lt;Relationships.RelationshipsExtension&gt;
         ///      &lt;Associations Type=&quot;Relationships.Associations&quot;&gt;

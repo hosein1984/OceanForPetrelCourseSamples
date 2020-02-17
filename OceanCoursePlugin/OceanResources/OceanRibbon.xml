@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration Type="Configuration.ConfigurationState" Version="1.0.0.12" Caption="Configuration">
+  <Extensions Type="Extensibility.ExtensionCollection">
+    <Workspaces.WorkspaceExtension EntityId="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+    <Relationships.RelationshipsExtension>
+      <Associations Type="Relationships.Associations">
+        <Relationships.Association RelationshipId="Configuration-Section" Role="Configuration">
+          <AssociatedEnds Type="AssociatedEnds">
+            <AssociatedEnd Role="Section">
+              <Entities Type="Entities">
+                <EntityId Value="8da620f7-052b-4706-8268-bab96921ed00" />
+                <EntityId Value="546bc8fa-1e0d-40cf-8c8c-5b416b742ead" />
+                <EntityId Value="d64b3a00-44b9-4877-be10-6b5d30a1d563" />
+                <EntityId Value="4a21ea3f-1e83-415b-8e02-6ad286b99b0b" />
+                <EntityId Value="b626654c-8d05-4800-a88b-8a4209334a79" />
+                <EntityId Value="01190c67-b322-47a4-834f-5273cee28e61" />
+                <EntityId Value="18690116-4072-4d80-95d5-ad4beb4c601a" />
+                <EntityId Value="ab0dbefc-ae6a-4384-bd8c-556d316989ae" />
+              </Entities>
+            </AssociatedEnd>
+          </AssociatedEnds>
+        </Relationships.Association>
+      </Associations>
+    </Relationships.RelationshipsExtension>
+  </Extensions>
+  <Sections Type="Extesibility.ConfigurationSectionCollection">
+    <Commands.CommandSection Version="1.0.0.7">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="8da620f7-052b-4706-8268-bab96921ed00" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Commands Type="Commands.CommandCollection">
+        <CommandInfo Id="OceanCoursePlugin._15_UITrees.XYZObjectCommand" Type="Commands.SimpleCommand">
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension>
+              <Attributes Type="Attributes.AttributeCollection">
+                <Attributes.AttributeValue AttributeId="Appearance.Caption" ValueType="System.String" Value="XYZObject" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.32" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_32.png}" />
+                <Attributes.AttributeValue AttributeId="Appearance.Image.16" ValueType="Appearance.ImageData" Value="{Uri:pack://application:,,,/Slb.Ocean.Petrel.Resources;component/images/modules_16.png}" />
+              </Attributes>
+            </Attributes.AttributesExtension>
+          </Extensions>
+        </CommandInfo>
+      </Commands>
+      <CommandGroups Type="Commands.CommandGroupCollection">
+        <CommandGroup Id="Platform.CommandGroups.InsertObjects">
+          <CommandItems Type="Commands.CommandItemCollection">
+            <Commands.CommandItem CommandId="OceanCoursePlugin._15_UITrees.XYZObjectCommand" />
+          </CommandItems>
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension />
+          </Extensions>
+        </CommandGroup>
+        <CommandGroup Id="Platform.CommandGroups.InsertFolders">
+          <CommandItems Type="Commands.CommandItemCollection"></CommandItems>
+          <Extensions Type="Extensibility.ExtensionCollection">
+            <Attributes.AttributesExtension />
+          </Extensions>
+        </CommandGroup>
+      </CommandGroups>
+    </Commands.CommandSection>
+    <ToolContainers.RibbonSection Version="1.0.0.10">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="546bc8fa-1e0d-40cf-8c8c-5b416b742ead" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Ribbons Type="Extesibility.RibbonCollection" />
+    </ToolContainers.RibbonSection>
+    <ToolContainers.PaletteSection Version="1.0.0.7">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="d64b3a00-44b9-4877-be10-6b5d30a1d563" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Palettes Type="Extesibility.PaletteCollection" />
+    </ToolContainers.PaletteSection>
+    <ToolContainers.MiniToolbarSection Version="1.0.0.5">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="4a21ea3f-1e83-415b-8e02-6ad286b99b0b" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <MiniToolbars Type="Extesibility.MiniToolbarCollection" />
+    </ToolContainers.MiniToolbarSection>
+    <Configuration.ResourceSection Version="1.0.0.8">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="b626654c-8d05-4800-a88b-8a4209334a79" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Resources Type="Configuration.ResourceCollection" />
+    </Configuration.ResourceSection>
+    <Rules.RuleSection Version="1.0.0.4">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="01190c67-b322-47a4-834f-5273cee28e61" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Rules Type="Rules.RuleCollection" />
+    </Rules.RuleSection>
+    <Configuration.FeatureSection Version="1.0.0.0">
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="18690116-4072-4d80-95d5-ad4beb4c601a" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Features Type="Configuration.FeatureCollection" />
+    </Configuration.FeatureSection>
+    <SceneSection>
+      <Extensions Type="Extensibility.ExtensionCollection">
+        <Workspaces.WorkspaceExtension EntityId="ab0dbefc-ae6a-4384-bd8c-556d316989ae" />
+        <Relationships.RelationshipsExtension>
+          <Associations Type="Relationships.Associations">
+            <Relationships.Association RelationshipId="Configuration-Section" Role="Section">
+              <AssociatedEnds Type="AssociatedEnds">
+                <AssociatedEnd Role="Configuration">
+                  <Entities Type="Entities">
+                    <EntityId Value="1d4a682b-a315-4ae3-82cc-2879acbc000d" />
+                  </Entities>
+                </AssociatedEnd>
+              </AssociatedEnds>
+            </Relationships.Association>
+          </Associations>
+        </Relationships.RelationshipsExtension>
+      </Extensions>
+      <Scenes Type="SceneCollection" />
+    </SceneSection>
+  </Sections>
+</Configuration>
