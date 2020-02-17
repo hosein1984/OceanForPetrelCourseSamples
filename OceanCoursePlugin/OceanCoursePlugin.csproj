@@ -48,6 +48,7 @@
     <Reference Include="Slb.Ocean.Petrel.Modeling, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.ReservoirEngineering, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.Seismic, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.UI.Controls, Version=16.1.0.0, Culture=neutral, PublicKeyToken=da9605198f529641, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.UI.Visualization3D, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Petrel.UI.Visualization3D.dll</HintPath>
@@ -63,6 +64,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -117,6 +119,13 @@
     <Compile Include="_13_UIAdvancedCustomizations\MakeWellVisibleIn3DOptionCommandResourceModificationHandler.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UIAdvancedCustomizationsModule.cs" />
     <Compile Include="_13_UIAdvancedCustomizations\UpdateWellNameTextCommandHandler.cs" />
+    <Compile Include="_14_UIWindows\DisplayWellHeadInformationWithCustomUIWorkstep.cs" />
+    <Compile Include="_14_UIWindows\DisplayWellHeadInformationWithCustomUIWorkstepUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_14_UIWindows\DisplayWellHeadInformationWithCustomUIWorkstepUI.designer.cs">
+      <DependentUpon>DisplayWellHeadInformationWithCustomUIWorkstepUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstep.cs" />
     <Compile Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +181,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_14_UIWindows\DisplayWellHeadInformationWithCustomUIWorkstepUI.resx">
+      <DependentUpon>DisplayWellHeadInformationWithCustomUIWorkstepUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_14_UIWindows\TimeUnitConversionWithCustomUIWorkstepUI.resx">
       <DependentUpon>TimeUnitConversionWithCustomUIWorkstepUI.cs</DependentUpon>

@@ -12,6 +12,7 @@ namespace OceanCoursePlugin._14_UIWindows
     /// </summary>
     public class UIWindowsModule : IModule
     {
+        private Process m_displaywellheadinformationwithcustomuiworkstepInstance;
         private Process m_timeunitconversionwithcustomuiworkstepInstance;
         public UIWindowsModule()
         {
@@ -38,6 +39,12 @@ namespace OceanCoursePlugin._14_UIWindows
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep
+            OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep displaywellheadinformationwithcustomuiworkstepInstance = new OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep();
+            PetrelSystem.WorkflowEditor.AddUIFactory<OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep.Arguments>(new OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep.UIFactory());
+            PetrelSystem.WorkflowEditor.Add(displaywellheadinformationwithcustomuiworkstepInstance);
+            m_displaywellheadinformationwithcustomuiworkstepInstance = new Slb.Ocean.Petrel.Workflow.WorkstepProcessWrapper(displaywellheadinformationwithcustomuiworkstepInstance);
+            PetrelSystem.ProcessDiagram.Add(m_displaywellheadinformationwithcustomuiworkstepInstance, "Plug-ins");
             // Register OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep
             OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep timeunitconversionwithcustomuiworkstepInstance = new OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep();
             PetrelSystem.WorkflowEditor.AddUIFactory<OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep.Arguments>(new OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep.UIFactory());
@@ -65,6 +72,9 @@ namespace OceanCoursePlugin._14_UIWindows
         /// </summary>
         public void Disintegrate()
         {
+            // Unregister OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep
+            PetrelSystem.WorkflowEditor.RemoveUIFactory<OceanCoursePlugin._14_UIWindows.DisplayWellHeadInformationWithCustomUIWorkstep.Arguments>();
+            PetrelSystem.ProcessDiagram.Remove(m_displaywellheadinformationwithcustomuiworkstepInstance);
             // Unregister OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep
             PetrelSystem.WorkflowEditor.RemoveUIFactory<OceanCoursePlugin._14_UIWindows.TimeUnitConversionWithCustomUIWorkstep.Arguments>();
             PetrelSystem.ProcessDiagram.Remove(m_timeunitconversionwithcustomuiworkstepInstance);
