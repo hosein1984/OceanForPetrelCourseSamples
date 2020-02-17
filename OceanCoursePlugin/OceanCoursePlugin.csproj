@@ -146,6 +146,8 @@
     <Compile Include="_15_UITrees\XYZObjectImageInfo.cs" />
     <Compile Include="_15_UITrees\XYZObjectNameInfo.cs" />
     <Compile Include="_15_UITrees\XYZOjectDataSourceFactory.cs" />
+    <Compile Include="_16_UISettingDialogPage\PrintSettingDataWorkstep.cs" />
+    <Compile Include="_16_UISettingDialogPage\SettingDialogPageModule.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />

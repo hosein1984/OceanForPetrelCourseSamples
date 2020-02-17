@@ -6,6 +6,8 @@ using OceanCoursePlugin._11_UIOverview;
 using OceanCoursePlugin._12_UICustomizations;
 using OceanCoursePlugin._13_UIAdvancedCustomizations;
 using OceanCoursePlugin._14_UIWindows;
+using OceanCoursePlugin._15_UITrees;
+using OceanCoursePlugin._16_UISettingDialogPage;
 using OceanCoursePlugin._3_WorkflowAndWorksteps;
 using OceanCoursePlugin._4_DataAccessOverview;
 using OceanCoursePlugin._5_DataAccessShapes;
@@ -37,7 +39,6 @@ namespace OceanCoursePlugin
         {
             get
             {
-                yield return new ModuleReference(typeof(OceanCoursePlugin._15_UITrees.UITreesModule)); 
                 //yield return new ModuleReference(typeof(CoreAndServicesModule));
                 //yield return new ModuleReference(typeof(HelloModule));
                 //yield return new ModuleReference(typeof(WorkflowAndWorkstepsModule));
@@ -52,7 +53,9 @@ namespace OceanCoursePlugin
                 //yield return new ModuleReference(typeof(UIOverviewModule));
                 //yield return new ModuleReference(typeof(UICustomizationsModule));
                 //yield return new ModuleReference(typeof(UIAdvancedCustomizationsModule));
-                yield return new ModuleReference(typeof(UIWindowsModule));
+                //yield return new ModuleReference(typeof(UIWindowsModule));
+                //yield return new ModuleReference(typeof(UITreesModule));
+                yield return new ModuleReference(typeof(SettingDialogPageModule));
             }
         }
 
