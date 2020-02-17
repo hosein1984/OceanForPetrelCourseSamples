@@ -37,6 +37,8 @@ namespace OceanCoursePlugin._15_UITrees
         /// </summary>
         public void Integrate()
         {
+            // Register OceanCoursePlugin._15_UITrees.XYZOjectDataSourceFactory
+            PetrelSystem.AddDataSourceFactory(OceanCoursePlugin._15_UITrees.XYZOjectDataSourceFactory.Instance);
             // Register TreeItem
             CoreSystem.Services.AddService(typeof(OceanCoursePlugin._15_UITrees.XYZObject), typeof(Slb.Ocean.Petrel.UI.INameInfoFactory), OceanCoursePlugin._15_UITrees.XYZObjectFactory.Instance);
             CoreSystem.Services.AddService(typeof(OceanCoursePlugin._15_UITrees.XYZObject), typeof(Slb.Ocean.Petrel.UI.IImageInfoFactory), OceanCoursePlugin._15_UITrees.XYZObjectFactory.Instance);
@@ -65,6 +67,8 @@ namespace OceanCoursePlugin._15_UITrees
         /// </summary>
         public void Disintegrate()
         {
+            // Unregister XYZOjectDataSourceFactory
+            PetrelSystem.RemoveDataSourceFactory(OceanCoursePlugin._15_UITrees.XYZOjectDataSourceFactory.Instance);
             CoreSystem.Services.RemoveService(typeof(OceanCoursePlugin._15_UITrees.XYZObject), typeof(Slb.Ocean.Petrel.UI.INameInfoFactory));
             CoreSystem.Services.RemoveService(typeof(OceanCoursePlugin._15_UITrees.XYZObject), typeof(Slb.Ocean.Petrel.UI.IImageInfoFactory));
             // TODO:  Add UITreesModule.Disintegrate implementation

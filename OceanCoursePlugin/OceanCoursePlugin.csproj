@@ -45,6 +45,10 @@
     </Reference>
     <Reference Include="Slb.Ocean.Data, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.Configuration, Version=16.1.0.0, Culture=neutral, PublicKeyToken=d42cec326f61051f, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Data.Persistence, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\Public\Slb.Ocean.Petrel.Data.Persistence.dll</HintPath>
+    </Reference>
     <Reference Include="Slb.Ocean.Petrel.Modeling, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.ReservoirEngineering, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
     <Reference Include="Slb.Ocean.Petrel.Seismic, Version=16.3.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
@@ -141,6 +145,7 @@
     <Compile Include="_15_UITrees\XYZObjectFactory.cs" />
     <Compile Include="_15_UITrees\XYZObjectImageInfo.cs" />
     <Compile Include="_15_UITrees\XYZObjectNameInfo.cs" />
+    <Compile Include="_15_UITrees\XYZOjectDataSourceFactory.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
