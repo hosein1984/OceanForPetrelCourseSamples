@@ -37,6 +37,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OIV.Inventor, Version=9.6.1.1, Culture=neutral, PublicKeyToken=cc281c744497d5fd, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\OIV.Inventor.dll</HintPath>
+    </Reference>
+    <Reference Include="OIV.Inventor.Base, Version=9.6.1.1, Culture=neutral, PublicKeyToken=cc281c744497d5fd, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\OIV.Inventor.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="OIV.Inventor.SbLinear, Version=9.6.1.1, Culture=neutral, PublicKeyToken=cc281c744497d5fd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Schlumberger\Petrel 2016\OIV.Inventor.SbLinear.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Slb.Ocean.Coordinates, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL">
@@ -155,8 +167,10 @@
       <DependentUpon>XYZObjectSettingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPageFactory.cs" />
+    <Compile Include="_17_UIVisualization\SOXYZNode.cs" />
     <Compile Include="_17_UIVisualization\UIVisualizationModule.cs" />
     <Compile Include="_17_UIVisualization\XYZObjectMapRenderer.cs" />
+    <Compile Include="_17_UIVisualization\XYZObjectWindow3DRenderer.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />

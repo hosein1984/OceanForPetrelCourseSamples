@@ -29,6 +29,7 @@ namespace OceanCoursePlugin._17_UIVisualization
         public void Initialize()
         {
             CoreSystem.Services.AddService(typeof(XYZObject), typeof(IMapRenderer), new XYZObjectMapRenderer());
+            CoreSystem.Services.AddService(typeof(XYZObject), typeof(IWindow3DRenderer), new XYZObjectWindow3DRenderer());
         }
 
         /// <summary>
