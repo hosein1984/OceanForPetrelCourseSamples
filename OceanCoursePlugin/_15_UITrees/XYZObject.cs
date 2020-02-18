@@ -1,4 +1,7 @@
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Slb.Ocean.Core;
+using Slb.Ocean.Data.Hosting;
 using Slb.Ocean.Petrel.Data;
 using Slb.Ocean.Petrel.Data.Persistence;
 using Slb.Ocean.Petrel.UI;
@@ -10,7 +13,7 @@ namespace OceanCoursePlugin._15_UITrees
 	/// (cannot contain more elements under itself)
 	/// </summary>
 	[Archivable]
-	class XYZObject : INameInfoSource, IImageInfoSource, IIdentifiable
+	class XYZObject : INameInfoSource, IImageInfoSource, IIdentifiable, INotifyPropertyChanged
 	{
         [Archived]
 	    private float _radius = 30.0f;
@@ -50,8 +53,9 @@ namespace OceanCoursePlugin._15_UITrees
 	        {
 	            _x = value;
 	            _structuredArchiveDataSource.IsDirty = true;
+	            OnPropertyChanged();
 	        }
-	    }
+        }
 
 	    public float Y
 	    {
@@ -60,6 +64,7 @@ namespace OceanCoursePlugin._15_UITrees
 	        {
 	            _y = value;
 	            _structuredArchiveDataSource.IsDirty = true;
+	            OnPropertyChanged();
             }
         }
 
@@ -70,6 +75,7 @@ namespace OceanCoursePlugin._15_UITrees
 	        {
 	            _z = value;
 	            _structuredArchiveDataSource.IsDirty = true;
+	            OnPropertyChanged();
             }
         }
 
@@ -80,6 +86,7 @@ namespace OceanCoursePlugin._15_UITrees
 	        {
 	            _radius = value;
 	            _structuredArchiveDataSource.IsDirty = true;
+	            OnPropertyChanged();
             }
         }
 
@@ -90,7 +97,8 @@ namespace OceanCoursePlugin._15_UITrees
 	        {
 	            _name = value;
 	            _structuredArchiveDataSource.IsDirty = true;
-            }
+	            OnPropertyChanged();
+	        }
 	    }
 
 	    #region INameInfoSource Members
@@ -106,6 +114,12 @@ namespace OceanCoursePlugin._15_UITrees
 	    #endregion
 
 	    public Droid Droid => _droid;
+	    public event PropertyChangedEventHandler PropertyChanged;
+
+	    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+	    {
+	        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+	    }
 	}
 
 }

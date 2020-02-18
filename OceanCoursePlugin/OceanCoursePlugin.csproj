@@ -155,6 +155,8 @@
       <DependentUpon>XYZObjectSettingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPageFactory.cs" />
+    <Compile Include="_17_UIVisualization\UIVisualizationModule.cs" />
+    <Compile Include="_17_UIVisualization\XYZObjectMapRenderer.cs" />
     <Compile Include="_2_CoreAndServices\CoreAndServicesModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloModule.cs" />
     <Compile Include="_2_CoreAndServices\HelloWorldWorkstep.cs" />
