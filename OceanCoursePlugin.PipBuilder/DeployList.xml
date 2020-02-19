@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OceanDeployList>
+  <CopyList>
+    <Project source="..\OceanCoursePlugin\OceanCoursePlugin.csproj" required="True" />
+  </CopyList>
+</OceanDeployList>

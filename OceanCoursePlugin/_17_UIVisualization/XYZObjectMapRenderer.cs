@@ -9,7 +9,7 @@ using Color = System.Drawing.Color;
 
 namespace OceanCoursePlugin._17_UIVisualization
 {
-    public class XYZObjectMapRenderer : IMapRenderer
+    public class XYZObjectMapRenderer : IMapRenderer, IMapPicking
     {
         public bool CanDraw(object domainObj, MapRendererContext context)
         {
@@ -89,6 +89,25 @@ namespace OceanCoursePlugin._17_UIVisualization
                 xyzObject.PropertyChanged -= propertyChangedEventHandler;
             }
 
+        }
+
+        public void GetPickInfo(object domainObj, MapPickedPoint point, MapRendererContext context)
+        {
+            var xyzObject = domainObj as XYZObject;
+            //
+            if (xyzObject == null) return;
+            //
+            var circleCenter = new Point2(xyzObject.X, xyzObject.Y);
+            var pickedPoint  = new Point2(point.Ray.Origin.X, point.Ray.Origin.Y);
+            //
+            Segment2 fromPickedPointToCircleCenter = new Segment2(circleCenter, pickedPoint);
+            //
+            // if the segment length is smaller than the radius then we assume that the object is selected
+            if (fromPickedPointToCircleCenter.Length <= xyzObject.Radius)
+            {
+                point.PickString = new[] {"Picked XYZ"};
+                point.IsHit = true;
+            }
         }
     }
 }

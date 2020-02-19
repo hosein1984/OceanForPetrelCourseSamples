@@ -56,6 +56,7 @@ namespace OceanCoursePlugin._15_UITrees
         {
             // Add Ribbon Configuration file
             PetrelSystem.ConfigurationService.AddConfiguration(OceanCoursePlugin.Properties.Resources.OceanRibbon);
+            PetrelSystem.ConfigurationService.AddConfiguration(OceanCoursePlugin.Properties.Resources.PetrelConfigFile);
 
             // TODO:  Add UITreesModule.IntegratePresentation implementation
         }

@@ -167,6 +167,8 @@
       <DependentUpon>XYZObjectSettingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="_16_UISettingDialogPage\XYZObjectSettingPageFactory.cs" />
+    <Compile Include="_17_UIVisualization\MoveXYZObjectIn3DWindowMode.cs" />
+    <Compile Include="_17_UIVisualization\MoveXYZObjectInMapWindowMode.cs" />
     <Compile Include="_17_UIVisualization\SOXYZNode.cs" />
     <Compile Include="_17_UIVisualization\UIVisualizationModule.cs" />
     <Compile Include="_17_UIVisualization\XYZObjectMapRenderer.cs" />
@@ -218,6 +220,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="_14_UIWindows\DisplayWellHeadInformationWithCustomUIWorkstepUI.resx">
       <DependentUpon>DisplayWellHeadInformationWithCustomUIWorkstepUI.cs</DependentUpon>
@@ -230,7 +233,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\PetrelConfigFile.xml" />
+    <EmbeddedResource Include="Resources\PetrelConfigFile.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

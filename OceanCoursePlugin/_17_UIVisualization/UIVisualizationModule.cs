@@ -50,7 +50,9 @@ namespace OceanCoursePlugin._17_UIVisualization
         /// </summary>
         public void IntegratePresentation()
         {
-
+            PetrelSystem.WindowModes.AddWindowMode(new MoveXYZObjectInMapWindowMode());
+            PetrelSystem.WindowModes.AddWindowMode(new MoveXYZObjectIn3DWindowMode());
+            PetrelSystem.ConfigurationService.AddConfiguration(OceanCoursePlugin.Properties.Resources.PetrelConfigFile);
             // TODO:  Add UIVisualizationModule.IntegratePresentation implementation
         }
 

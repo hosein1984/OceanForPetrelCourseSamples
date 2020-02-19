@@ -30,15 +30,15 @@ namespace OceanCoursePlugin._16_UISettingDialogPage
         {
             // TODO: finish the implementation
             var xyzObject = domainObject as XYZObject;
-            XYZObjectSettingPage dialog = new XYZObjectSettingPage(xyzObject);
+            XYZObjectSettingPage xyzObjectUserControl = new XYZObjectSettingPage(xyzObject);
             //
-            DialogPage page = new DialogPage("Properties", (dialogPage, o) => dialog)
+            DialogPage page = new DialogPage("Properties", (dialogPage, o) => xyzObjectUserControl)
             {
                 DomainObject = domainObject
             };
             //
-            page.Apply += dialog.ApplyCallback;
-
+            page.Apply += xyzObjectUserControl.ApplyCallback;
+            //
             settingsPages.Add(page);
         }
 

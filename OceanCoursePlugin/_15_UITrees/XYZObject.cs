@@ -36,7 +36,6 @@ namespace OceanCoursePlugin._15_UITrees
 	    [ArchivableContextInject]
 	    private StructuredArchiveDataSource _structuredArchiveDataSource;
 
-
 	    public XYZObject()
 	    {
 	        var dataSourceManager = DataManager.DataSourceManager;

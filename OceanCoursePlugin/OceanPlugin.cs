@@ -54,7 +54,7 @@ namespace OceanCoursePlugin
                 //yield return new ModuleReference(typeof(UIOverviewModule));
                 //yield return new ModuleReference(typeof(UICustomizationsModule));
                 //yield return new ModuleReference(typeof(UIAdvancedCustomizationsModule));
-                //yield return new ModuleReference(typeof(UIWindowsModule));
+                yield return new ModuleReference(typeof(UIWindowsModule));
                 yield return new ModuleReference(typeof(UITreesModule));
                 yield return new ModuleReference(typeof(SettingDialogPageModule));
                 yield return new ModuleReference(typeof(UIVisualizationModule));
